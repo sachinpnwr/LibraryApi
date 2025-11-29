@@ -13,8 +13,12 @@ namespace Library.Api.DTOs
     public class LoanSummaryDto
     {
         public int Id { get; set; }
+        public int BookId { get; set; }
+        public string? BookName { get; set; }
         public int MemberId { get; set; }
         public string? MemberName { get; set; }
+        public string? MemberEmail { get; set; }
+
         public DateTime IssuedAt { get; set; }
         public DateTime? DueAt { get; set; }
         public DateTime? ReturnedAt { get; set; }

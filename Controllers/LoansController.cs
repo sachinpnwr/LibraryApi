@@ -29,8 +29,11 @@ namespace Library.Api.Controllers
             var loanDtos = loans.Select(l => new LoanSummaryDto
             {
                 Id = l.Id,
+                BookId = l.BookId,
+                BookName = l.Book?.Title,
                 MemberId = l.MemberId,
                 MemberName = l.Member?.FullName,
+                MemberEmail = l.Member?.Email,
                 IssuedAt = l.IssuedAt,
                 DueAt = l.DueAt,
                 ReturnedAt = l.ReturnedAt,
@@ -60,6 +63,8 @@ namespace Library.Api.Controllers
             var loanDtos = loans.Select(l => new LoanSummaryDto
             {
                 Id = l.Id,
+                BookId = l.BookId,
+                BookName = l.Book?.Title,
                 MemberId = l.MemberId,
                 MemberName = l.Member?.FullName,
                 IssuedAt = l.IssuedAt,
